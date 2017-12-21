@@ -9,12 +9,12 @@
     <h1>Menus</h1>
     
 <ul>
-        @foreach (var menu in Model)
+        @foreach (var eachMenu in Model)
         {
             <li>
                   <a asp-controller="Menu" 
                      asp-action= "ViewMenu" 
-                     asp-route-id ="@menu.ID">menu.Name</a>
+                     asp-route-id ="@eachMenu.ID">eachMenu.Name</a>
             </li>
 
         }
