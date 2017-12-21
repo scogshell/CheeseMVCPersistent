@@ -23,7 +23,7 @@ namespace CheeseMVC.Controllers
         public IActionResult Index()
         {
             List<CheeseCategory> categories = context.Categories.ToList();
-            return View();
+            return View(categories);
         }
 
         public IActionResult Add()
@@ -36,11 +36,10 @@ namespace CheeseMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                CheeseCategory newCategory = new CheeseCategory
-                {
-                    Name = addCategoryViewModel.Name,
+                CheeseCategory newCategory = new CheeseCategory();
+                newCategory.Name = addCategoryViewModel.Name;
 
-                };
+                
                 context.Categories.Add(newCategory);
                 context.SaveChanges();
 

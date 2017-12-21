@@ -1,0 +1,26 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model CheeseMVC.ViewModels.AddMenuViewModel
+
+    
+
+@{ 
+    ViewBag.Title = "New Menu";
+
+}
+
+<form asp-controller="Menu" asp-action="Add" method="post">
+      <div class="form-group">
+          <label asp-for="Name"></label>
+          <input class="form-control" asp-for="Name" />
+          <span asp-validation-for="Name"></span>
+          
+          <button type="submit" value="Add Menu">Add Menu</button>
+          
+      </div>
+      
+</form>

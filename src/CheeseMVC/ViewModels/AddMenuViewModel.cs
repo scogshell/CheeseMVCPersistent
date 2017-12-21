@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace CheeseMVC.ViewModels
 {
-    public class AddCategoryViewModel
+    public class AddMenuViewModel
     {
-        [Required]
-        [Display(Name= "Category Name")] 
+        [Required(ErrorMessage ="You must have a menu name")]
+        [Display(Name ="Menu Name")]
         public string Name { get; set; }
-        public int ID { get; set; }
-    }
+
+        
+
+     }
 }
