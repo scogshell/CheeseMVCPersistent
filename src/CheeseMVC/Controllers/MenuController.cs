@@ -1,4 +1,5 @@
 ﻿using CheeseMVC.Data;
+  
 using CheeseMVC.Models;
 using CheeseMVC.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -37,13 +38,13 @@ namespace CheeseMVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                Menu newMenu = new Menu
+                Menu newMenu = new Menu()
                 {
-                    Name = addMenuViewModel.Name,
+                    Name = addMenuViewModel.Name
 
                 };
 
-                string menuName = addMenuViewModel.Name;
+                //string menuName = addMenuViewModel.Name;
 
                 context.Menus.Add(newMenu);
                 context.SaveChanges();
